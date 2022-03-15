@@ -28,8 +28,12 @@ public class User {
     private Set<Role> roles = new HashSet<>();
 
     @JsonIgnore
-    @OneToMany(mappedBy="userEntity", fetch=FetchType.EAGER)
+    @OneToMany(mappedBy="user", fetch=FetchType.EAGER)
     private Set<Cargo> cargoes;
+
+    @JsonIgnore
+    @OneToMany(mappedBy="queryLog", fetch=FetchType.EAGER)
+    private Set<QueryLog> queryLogs;
 
 
     public User() {
@@ -39,6 +43,16 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
+    }
+
+    //___g and s__
+
+    public Set<QueryLog> getQueryLogs() {
+        return queryLogs;
+    }
+
+    public void setQueryLogs(Set<QueryLog> queryLogs) {
+        this.queryLogs = queryLogs;
     }
 
     public Set<Cargo> getCargoes() {
