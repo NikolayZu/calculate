@@ -1,2 +1,7 @@
-package com.zuzex.calculator.entity;public enum ERole {
+package com.zuzex.calculator.entity;
+
+public enum ERole {
+    ROLE_USER,
+    ROLE_MODERATOR,
+    ROLE_ADMIN
 }

@@ -1,2 +1,8 @@
-package com.zuzex.calculator.controller;public class UserController {
+package com.zuzex.calculator.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UserController {
+
 }
