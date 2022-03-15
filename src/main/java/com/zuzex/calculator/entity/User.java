@@ -32,7 +32,7 @@ public class User {
     private Set<Cargo> cargoes;
 
     @JsonIgnore
-    @OneToMany(mappedBy="queryLog", fetch=FetchType.EAGER)
+    @OneToMany(mappedBy="user", fetch=FetchType.EAGER)
     private Set<QueryLog> queryLogs;
 
 
